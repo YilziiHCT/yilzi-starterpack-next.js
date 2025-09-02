@@ -20,7 +20,7 @@
 */
 
 import Image from 'next/image'
-import { ExternalLink, Github, Calendar, Tag } from 'lucide-react'
+import { ExternalLink, Github } from 'lucide-react'
 
 interface YilziProjectProps {
   project: {
@@ -44,7 +44,7 @@ export default function YilziProjectCard({ project }: YilziProjectProps) {
   }
 
   return (
-    <div className="yilzi-card overflow-hidden group">
+    <div className="border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden group bg-white">
       {/* Project Image */}
       <div className="relative h-48 overflow-hidden">
         <Image
