@@ -7,7 +7,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write .",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@radix-ui/react-hover-card": "^1.1.15",
@@ -20,6 +22,7 @@
     "class-variance-authority": "^0.7.1",
     "eslint": "8.49.0",
     "eslint-config-next": "13.5.1",
+    "framer-motion": "^11.11.9",
     "input-otp": "^1.4.2",
     "lucide-react": "^0.446.0",
     "next": "14.0.0",
@@ -29,7 +32,14 @@
     "react-hook-form": "^7.62.0",
     "tailwindcss": "3.3.3",
     "typescript": "5.2.2",
-    "vaul": "^1.1.2"
+    "vaul": "^1.1.2",
+    "zod": "^3.23.8",
+    "axios": "^1.7.7"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2"
   },
   "keywords": [
     "nextjs",
@@ -39,5 +49,19 @@
     "tailwind"
   ],
   "author": "Yilzi (@Yilziii)",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Yilzi/yilzi-starterpack-next.js"
+  },
+  "homepage": "https://yilzi.dev",
+  "bugs": {
+    "url": "https://github.com/Yilzi/yilzi-starterpack-next.js/issues"
+  },
+  "engines": {
+    "node": ">=18.17.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx,json,css,md}": "prettier --write"
+  }
 }
