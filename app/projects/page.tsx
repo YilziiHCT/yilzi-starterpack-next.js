@@ -22,8 +22,22 @@
 import YilziProjectCard from '@/components/yilziProjectCard'
 import { Filter } from 'lucide-react'
 
+type ProjectStatus = "Completed" | "In Progress" | "Coming Soon"
+
+interface Project {
+  id: number
+  title: string
+  description: string
+  image: string
+  category: string
+  technologies: string[]
+  demoUrl?: string
+  repoUrl?: string
+  status: ProjectStatus
+}
+
 export default function ProjectsPage() {
-  const yilziProjects = [
+  const yilziProjects: Project[] = [
     {
       id: 1,
       title: "E-Commerce Modern",
